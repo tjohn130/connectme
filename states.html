@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Google Fonts Link -->
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Faster+One|Fredoka+One|Luckiest+Guy&display=swap" rel="stylesheet">
+    <!-- CSS Stylesheet  -->
+    <link rel="stylesheet" type="text/css" href="./styles/reset.css">
+    <link rel="stylesheet" type="text/css" href="./styles/states.css">
+    <!-- jQuery Link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <title>Connect Me</title>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="container-fluid col-12 col-md-8">
+        <nav class="navbar navbar-dark bg-dark sticky-top ">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/home-solid.svg" class="d-inline-block align-top icon-size"> Home
+            </a>
+            <a class="navbar-brand" href="./states.html">
+                <img src="./images/stream-solid.svg" class="d-inline-block align-top icon-size"> The 50 States
+            </a>
+            <a class="navbar-brand" href="./contact.html">
+                <img src="./images/envelope-solid.svg" class="d-inline-block align-top icon-size"> Contact Me
+            </a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
+    </div>
+    <header class="jumbotron bg-primary">
+        <div class="container bg-success">
+            <h3>Choose a State</h3>
+            <p>Please select an United State</p>
+        </div>
+    </header>
+    <main class="container bg-primary">
+        <div class="container-fluid bg-success">
+            <div class="col-12 col-md-8 text-wrap" id="statefill"></div>
+        </div>
+    </main>
+    <footer class="container bg-primary">
+        <div class="container-fluid bg-success">
+            <div class="container bg-info">
+            </div>
+        </div>
+    </footer>
+    <!-- My custom Javascript File -->
+    <script src="scripts/states.js"></script>
+    <!-- Handlebars inline -->
+    <script src="scripts/handlebars-v4.1.2.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+/* Font Families imported from Google Fonts/
+
+    font-family: 'Fredoka One', cursive;
+    font-family: 'Luckiest Guy', cursive;
+    font-family: 'Faster One', cursive;
+    font-family: 'Baloo Bhaina', cursive;
+*/
+/*---------  HEADER SECTION  -----------*/
+header{
+    height: 150px;
+    font-family: 'Luckiest Guy', cursive;
+    border: 2px solid black; 
+}
+/*---------  BODY SECTION  -----------*/
+#statefill{
+    font-family: 'Fredoka One', cursive;
+    font-size: 12pt;
+}
+main{
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+}
+.icon-size{
+    width: 30px;
+    height: 30px;
+    alt: "x";
+}
+.stateitem{
+    border: 1px solid navy;
+    
+}
+/*---------  FOOTER SECTION  -----------*/
+footer{
+    height: 50px;
+    border: 2px solid black;
+}

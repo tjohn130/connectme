@@ -7,7 +7,9 @@
 */
 /*---------  HEADER SECTION  -----------*/
 header{
-    font-family: 'Baloo Bhaina', cursive;
+}
+header.p{
+    font-size: 14pt;
 }
 /*---------  BODY SECTION  -----------*/
 .icon-size{

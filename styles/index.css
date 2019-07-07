@@ -10,6 +10,13 @@ header{
     height: 150px;
     font-family: 'Luckiest Guy', cursive;
     border: 0.5em solid black; 
+    margin-top: 100px;
+}
+
+h1.title{
+    margin: 50px;
+    width: 960px;
+    
 }
 /* .titlename{
     height: ;

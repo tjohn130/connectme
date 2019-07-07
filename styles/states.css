@@ -19,6 +19,7 @@ header{
 main{
     border-right: 2px solid black;
     border-left: 2px solid black;
+    margin-top: 2rem;
 }
 .icon-size{
     width: 30px;

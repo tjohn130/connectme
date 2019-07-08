@@ -23,17 +23,19 @@ $(document).ready(function(){
             //Creates Bootstrap Card Template
             var card = $("<div class='card border-light mb-3'>")
             var cardhead = $("<div class='card-header'>")
+            var cardcolbody = $('<div class="collapse show" id="cardcollapse'+item_index+'">')
             var cardbody = $("<div class='card-body'>")
             var cardtitle = $("<div class='card-title'>")
             var cardtext = $("<div class='card-text'>")
             //Card Setup
-            card.append(cardhead).append(cardbody)
+            card.append(cardhead).append(cardcolbody)
+            cardcolbody.append(cardbody)
             cardbody.append(cardtitle).append(cardtext)
             console.log("this item is "+item)
             //loops through each titleitem array
-            titleitem.forEach(headitem => {
+            titleitem.forEach((headitem,headindex) => {
                 //Grabs the headitem from titleitem and appends to cardhead
-                cardhead.append(headitem)
+                cardhead.append('<a data-toggle="collapse" href="#cardcollapse'+headindex+'">'+headitem+'</a>')
             })
             //loop through each dataitem in item
             bodyitem.forEach((dataitem,dataindex) => {
@@ -41,9 +43,12 @@ $(document).ready(function(){
                 console.log(data[0][dataindex])
                 //appends dataitems in a cardtitle and cardtext
                 cardtext.append('<p>'+data[0][dataindex+1]+": "+dataitem+'</p>')
+
             })
             //appends each newdataitem in array to the 'statefill' id
             $("#statefill").append(card)
         })
     })
+
+    
 })

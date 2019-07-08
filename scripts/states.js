@@ -8,7 +8,7 @@ $(document).ready(function(){
     // AJAX call to the Cenus API for data
     $.ajax({
         method:'GET',
-        url:'https://api.census.gov/data/2014/pep/natstprc?get=STNAME,POP,DENSITY,DEATHS,BIRTHS&DATE=3&for=state:*&key=4c6cd7ae7b36521467af7b6b01e3ffc0f2fd4af9'
+        url:'https://api.census.gov/data/2013/pep/natstprc?get=STNAME,POP,DENSITY,DEATHS,BIRTHS&for=state:*&DATE_=6&key=4c6cd7ae7b36521467af7b6b01e3ffc0f2fd4af9'
     }).then(function(data){
     // // Testing id
     //     $("#statefill").text("STATES GO HERE");

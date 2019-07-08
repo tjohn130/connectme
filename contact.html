@@ -10,31 +10,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
    <!-- Google Fonts Link -->
-   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Faster+One|Fredoka+One|Luckiest+Guy&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina|Alfa+Slab+One|Faster+One|Fredoka+One|Luckiest+Guy&display=swap" rel="stylesheet">
    <!-- CSS Stylesheet  -->
    <link rel="stylesheet" type="text/css" href="./styles/reset.css">
    <link rel="stylesheet" type="text/css" href="./styles/contact.css">
     <title>Connect Me</title>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <div class="container">
-            <nav class="navbar navbar-dark bg-dark sticky-top ">
-                <a class="navbar-brand" href="./index.html">
-                    <img src="./images/home-solid.svg" class="d-inline-block align-top icon-size"> Home
-                </a>
-                <a class="navbar-brand" href="./states.html">
-                    <img src="./images/stream-solid.svg" class="d-inline-block align-top icon-size"> The 50 States
-                </a>
-                <a class="navbar-brand" href="./contact.html">
-                    <img src="./images/envelope-solid.svg" class="d-inline-block align-top icon-size"> Contact Me
-                </a>
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </nav>
-        </div>
     <header class="jumbotron ">
         <!-- Modal 1 -->
         <div class="modal" id="displayInfoModal" tabindex="-1">
@@ -45,24 +27,27 @@
                         <h4 class="modal-title">Title</h4>
                     </div>
                     <div class="moodal-body">
-                        <h5>
+                        <p>
                             Characters Name: Teddy Gbayee Johnson Jr.<br>
                             Race: Human<br>
                             Alightment: Good Neutral<br>
                             Age: 22<br>
-                            -------<br>
+                            <hr>
+                            Personality<br>
+                            &clubs;Friendship &ordm; Material goods come and go. Bonds of friendship last forever. (Good)<br>
+                            &clubs;People &ordm; I'm committed to the people I care about, not to ideals. (Neutral)<br>
+                            &clubs;Nature &ordm; The natural world is more important than all the constructs of civilization. (Neutral)<br>
+                            &diams;Once I start drinking, it's hard for me to stop.<br>
+                            <hr>
                             Skills<br>
-                            -------<br>
-                            &weierp;Arcana &ordm; Computer Arts &ordm; Amateur Culinary Arts
-                            &there4;Nature &ordm; Gardening
+                            &weierp;Arcana &ordm; Computer Arts &ordm; Amateur Culinary Arts<br>
+                            &there4;Nature &ordm; Gardening<br>
                             &prop;Preception &ordm; Active listening &ordm; Focus Analysis/Research<br>
-                            -------
-                        </h5>
+                        </p>
                         
                         
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary">Send</button>
                         <button class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
@@ -77,32 +62,54 @@
                         <button class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="moodal-body">
-                        <form>
+                        <form id="contact-form" method="POST" action="mailer.php">
                             <div class="form-group">
-                                <label for="inputEmail">Email</label>
-                                <input type="email" class="form-control" id="inputEmail" placeholder="address@email.com">
+                                <label for="inputName">Name</label>
+                                <input type="text" class="form-control" id="inputName" placeholder="Name Here" required>
                             </div>
                             <div class="form-group">
-                                <label for="inputMessageS">Message</label>
-                                <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+                                <label for="inputEmail">Email</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="address@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputMessage">Message</label>
+                                <textarea class="form-control" id="inputMessage" rows="5" required></textarea>
                             </div>
                         </form>
                     </div>
                     <div class="modal-footer">
-                        <button class="btn btn-primary">Send</button>
+                        <button class="btn btn-primary" id="sendEmail" type="submit">Send</button>
                         <button class="btn btn-primary" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-dark bg-dark sticky-top">
+            <a class="navbar-brand" href="./index.html">
+                <img src="./images/home-solid.svg" class="d-inline-block align-top icon-size"> Home
+            </a>
+            <a class="navbar-brand" href="./states.html">
+                <img src="./images/stream-solid.svg" class="d-inline-block align-top icon-size"> The 50 States
+            </a>
+            <a class="navbar-brand" href="./contact.html">
+                <img src="./images/envelope-solid.svg" class="d-inline-block align-top icon-size"> Contact Me
+            </a>
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </nav>
     <main class="container">
-        <div class="container">
-            <h2>How would you like to contact me?</h2>
+        <div class="container text-center">
+            <h1>How would you like to contact me?</h1><br>
             <button type="button" class="btn btn-info btn-outline-dark btn-lg" data-target="#displayInfoModal" data-toggle="modal">Display Info</button>
             <button type="button" class="btn btn-warning btn-outline-dark btn-lg" data-target="#displayEmailModal" data-toggle="modal">Send Email</button>
         </div>
-        <div class="container"></div>
+        <div class="container">
+            <div id="form-messages"></div>
+        </div>
     </main>
     <footer>
     </footer>

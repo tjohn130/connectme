@@ -7,13 +7,40 @@
 */
 /*---------  HEADER SECTION  -----------*/
 header.p{
-    font-size: 14pt;
+  font-size: 14pt;
+}
+/* Flaired edges, by Tomas Theunissen */ 
+hr.style-seven { 
+  overflow: visible;
+  /* For IE */ 
+  height: 30px; 
+  border-style: solid;
+  border-color: black;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+} 
+hr.style-seven:before { 
+/* Not really supposed to work, but does */ 
+display: block;
+content: "";
+height: 30px; 
+margin-top: -31px; 
+border-style: solid; 
+border-color: black; 
+border-width: 0 0 1px 0; 
+border-radius: 20px;
 }
 /*---------  BODY SECTION  -----------*/
-.icon-size{
+.icon-size {
     width: 30px;
     height: 30px;
     alt: "x";
+}
+body {
+  background-image: url(../images/bg1.svg);
+  background-repeat: no-repeat;
+  background-position: 50% 10%;
+  background-size: 100% 200%;
 }
 *, *:before, *:after {
     -moz-box-sizing: border-box;
@@ -24,7 +51,6 @@ header.p{
   html {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 100%;
-    background: #333;
     -webkit-font-smoothing: antialiased;
   }
   

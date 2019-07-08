@@ -21,7 +21,7 @@ $(document).ready(function(){
             var bodyitem =item.filter((val,index,arr) => (index >= 1))
 
             //Creates Bootstrap Card Template
-            var card = $("<div class='card'>")
+            var card = $("<div class='card border-light mb-3'>")
             var cardhead = $("<div class='card-header'>")
             var cardbody = $("<div class='card-body'>")
             var cardtitle = $("<div class='card-title'>")

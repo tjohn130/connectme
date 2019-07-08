@@ -8,14 +8,16 @@
 /*---------  HEADER SECTION  -----------*/
 header{
     height: 150px;
-    font-family: 'Luckiest Guy', cursive;
-    border: 0.5em solid black; 
+    font-family: 'Fredoka One', cursive;
+    /* border: 0.5em solid black;  */
     margin-top: 100px;
+    
 }
 
 h1.title{
-    margin: 50px;
-    width: 960px;
+    margin: auto;
+    width: 260px;
+    padding-top: 50px;
     
 }
 /* .titlename{
@@ -26,10 +28,21 @@ h1.title{
 /*---------  BODY SECTION  -----------*/
 main{
     height: 150px;
-    border: 2px solid black;
+}
+body{
+    background-image: url(../images/bg1.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 10%;
+    background-size: 100% 200%;
+}
+a.splashbtn{
+    height: 130px;
+    border:0.5em solid rgba(153, 255, 0, 0.247);
+}
+h3.splashbtn{
+    padding: 20px;
 }
 /*---------  FOOTER SECTION  -----------*/
 footer{
     height: 50px;
-    border: 2px solid black;
 }

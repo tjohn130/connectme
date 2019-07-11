@@ -3,6 +3,11 @@
 // This function only runs when the document is ready
 $(document).ready(function(){
     
+    $("a").click(function(){
+
+        console.log("dink");
+    })
+    
     // alert("The Javascript is running");
 
     // AJAX call to the Cenus API for data
@@ -13,29 +18,30 @@ $(document).ready(function(){
     // // Testing id
     //     $("#statefill").text("STATES GO HERE");
         
-        // This foreach loop displays every item in the callback 'data' array
-        data.forEach((item, item_index, arr) => {
+        // This foreach loop displays every item in the callback 'data' array take out only the first item in the array
+        var newdata = data.filter((val,index,arr) => (index >= 1))
+        console.log(newdata)
+        newdata.forEach((item, item_index, arr) => {
             //Grabs the first index of each item
             var titleitem = item.filter((val,index,arr) => (index < 1))
             //Grabs the other index of each item
             var bodyitem =item.filter((val,index,arr) => (index >= 1))
 
             //Creates Bootstrap Card Template
-            var card = $("<div class='card border-light mb-3'>")
-            var cardhead = $("<div class='card-header'>")
-            var cardcolbody = $('<div class="collapse show" id="cardcollapse'+item_index+'">')
+            var card = $("<div class='card border-light mb-3' style='width:18rem'>")
+            var cardhead = $("<div class='card-header text-center'>")
             var cardbody = $("<div class='card-body'>")
             var cardtitle = $("<div class='card-title'>")
             var cardtext = $("<div class='card-text'>")
             //Card Setup
-            card.append(cardhead).append(cardcolbody)
-            cardcolbody.append(cardbody)
+            card.append(cardhead).append(cardbody)
+            // cardcolbody.append(cardbody)
             cardbody.append(cardtitle).append(cardtext)
             console.log("this item is "+item)
             //loops through each titleitem array
-            titleitem.forEach((headitem,headindex) => {
+            titleitem.forEach((headitem) => {
                 //Grabs the headitem from titleitem and appends to cardhead
-                cardhead.append('<a data-toggle="collapse" href="#cardcollapse'+headindex+'">'+headitem+'</a>')
+                cardhead.append('<a>'+headitem+'</a>')
             })
             //loop through each dataitem in item
             bodyitem.forEach((dataitem,dataindex) => {
@@ -49,6 +55,7 @@ $(document).ready(function(){
             $("#statefill").append(card)
         })
     })
-
+    
     
 })
+

@@ -8,12 +8,12 @@
 /*---------  HEADER SECTION  -----------*/
 header {
     height: 150px;
-    font-family: 'Luckiest Guy', cursive;
-    border: 2px solid black; 
-    background-image: url("../images/the50staes.svg");
-    background-repeat: repeat;
+    font-family: 'Luckiest Guy', cursive; 
+    background-image: url("../images/the50states.svg");
+    background-size: 100% 300px;
+    background-position: center;
+    background-repeat: no-repeat;
     
-    background-size: 100px 200px;
 }
 /*---------  BODY SECTION  -----------*/
 #statefill {

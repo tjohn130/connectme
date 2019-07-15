@@ -9,6 +9,13 @@
 header.p{
   font-size: 14pt;
 }
+header{
+  height: 150px;
+  background-image: url("../images/contactme.svg");
+  background-size: 100% 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 /* Flaired edges, by Tomas Theunissen */ 
 hr.style-seven { 
   overflow: visible;
@@ -78,8 +85,8 @@ body {
     color: #999999;
   }
   
-  input {
-    width: 100%;
+  input.form-control {
+    /* width: 100%; */
     padding: 0.5em 0.5em;
     font-size: 1.2em;
     border-radius: 3px;
@@ -96,7 +103,7 @@ body {
   }
   
   button {
-    display: inline-block;
+    /* display: inline-block; */
     border-radius: 3px;
     border: none;
     font-size: 0.9rem;
@@ -107,7 +114,7 @@ body {
     /* -webkit-font-smoothing: antialiased; */
     font-weight: bold;
     margin: 0;
-    width: 100%;
+    /* width: 100%; */
     text-align: center;
   }
   

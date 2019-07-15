@@ -10,6 +10,10 @@ header {
     height: 150px;
     font-family: 'Luckiest Guy', cursive;
     border: 2px solid black; 
+    background-image: url("../images/the50staes.svg");
+    background-repeat: repeat;
+    
+    background-size: 100px 200px;
 }
 /*---------  BODY SECTION  -----------*/
 #statefill {
@@ -31,7 +35,6 @@ html {
 body {
     background-image: url(../images/bg1.svg);
     background-repeat: repeat;
-
 }
 .stateitem {
     border: 1px solid navy;
